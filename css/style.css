@@ -1,0 +1,256 @@
+/* <Genral> */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+section {
+  padding: 80px 0;
+}
+
+:root{
+  --bg:#f7f7f7;
+}
+.bg{
+  background-color: var(--bg);
+}
+.bg-icon{
+  background-color: rgba(0, 0, 0, .6);
+}
+.main-header h2::after {
+  content: "";
+  width: 250px;
+  height: 30px;
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+/* </Genral> */
+/* <Nav> */
+.navbar-nav .nav-link {
+  position: relative;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  transition: all 0.5s;
+}
+.navbar-nav .nav-link.active::after{
+  width: 100%;
+}
+/* </Nav> */
+/* <Home> */
+#home {
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+
+}
+#home .layout {
+  background-color: rgba(0, 0, 0, .7);
+}
+/* </Home> */
+/* <About> */
+.download-btn , .about-btn-contact:hover{
+  color: #F7F7F7 !important;
+  background-color: black;
+}
+.download-btn:hover , .about-btn-contact{
+  background-color: transparent;
+  color: black !important;
+}
+.download-btn , .about-btn-contact{
+  transition: all .5s;
+}
+.about-img::after{
+  content: "";
+    width: 8%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    z-index: 1;
+}
+.progress-bar{
+  background-color: black;
+  border-radius: 5px;
+  position: relative;
+  
+}
+.progress{
+  width: 100%;
+  height: 1.5rem;
+  background-color: #F7F7F7;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+.bar1::after{
+  content: '95%';
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.bar2::after{
+  content: '80%';
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+.bar3::after{
+  content: '90%';
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+/* </About> */
+/* <Services> */
+.serv-icon .rounded-circle{
+  background-color: #d8d6d6;
+  transition: all .5s;
+}
+.card:hover .rounded-circle{
+  background-color: black;
+  color: white;
+}
+/* </Services> */
+/* <portfolio> */
+.nav-pills .nav-link {
+  position: relative;
+}
+.nav-pills .nav-link{
+  color: black !important;}
+
+.nav-pills .nav-link::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  transition: all 0.5s;
+}
+.nav-pills .nav-link.active::after{
+  width: 100%;
+}
+
+.nav-pills .nav-link.active{
+  background-color: transparent;
+  border: none;
+
+}
+#portfolio .card img,
+#portfolio .card .text {
+  transition: all 1s;
+}
+#portfolio .layer {
+  background-color:rgba(255, 255, 255,.8);
+  opacity: 0;
+  transition: all .75s;
+}
+#portfolio .card:hover .layer {
+  opacity: 1;
+}
+#portfolio .card:hover img {
+  transform: scale(1.2);
+}
+.port-icon .rounded-circle{
+  transition: all .5s;
+}
+.port-icon :hover .rounded-circle{
+  background-color: white;
+  color: black;
+}
+/* </portfolio> */
+/* <Testimonial> */
+.carousel-item img{
+  width: 100px;
+}
+.carousel-indicators [data-bs-target]{
+width:10px;
+height: 10px;
+border-radius: 50%;
+background-color:black;
+}
+/* </Testimonial> */
+/* <Team> */
+#team .card-body{
+  background-color: #343434cc;
+}
+#team .card-body h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+#team .team-icon {
+   background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  text-align: center;
+  inset: 5px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#team .card:hover .team-icon {
+  opacity: 1;
+  transform: rotateY(360deg) scale(.9, .9);
+}
+#team .card:hover img {
+  transform: scale(1);
+}
+.team-icon .rounded-circle{
+  transition: all .5s;
+}
+.team-icon :hover .rounded-circle{
+  background-color: white;
+  color: black;
+}
+/* </Team> */
+/* <Contact> */
+textarea{
+  resize: none;
+}
+.form-control:focus {
+  border: 2px solid black;
+  box-shadow: none;
+  background-color: var(--bg);
+}
+.submit-btn{
+  color: #F7F7F7 !important;
+  background-color: #1c1c1c;
+  transition: all .5s;
+}
+.submit-btn:hover{
+  background-color: transparent;
+  color: black !important;
+}
+.contact-icon .rounded-circle{
+  background-color: #d8d6d6;
+  transition: all .5s;
+}
+.cntact-call:hover .rounded-circle{
+  background-color: black;
+  color: white;
+}
+/* </Contact> */
+/* <Footer> */
+footer .container-fluid{
+  background-color: #1c1c1c;
+}
+footer p{
+  color: #748182;;
+}
+/* </Footer> */
+
